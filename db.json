@@ -4,7 +4,24 @@
       "id": "home",
       "title": "Homepage | Astro Widgets",
       "description": "This is an example homepage for Astro Widgets.",
-      "widgets": []
+      "widgets": [
+        {
+          "type": "ImageWidget",
+          "image": {
+            "url": "https://via.placeholder.com/800x400",
+            "alt": "Some alt..."
+          }
+        },
+        {
+          "type": "TextWidget",
+          "text": "<h2>Welcome to Astro Widgets</h2><p>Here you can find the best widgets in the galaxy.</p>"
+        },
+        {
+          "type": "TwoTextColsWidget",
+          "leftText": "<h2>Left title</h2><p>Ad pariatur incididunt qui ex ea Lorem culpa sint eiusmod aliquip in. Ullamco et adipisicing ut irure exercitation nostrud minim eu culpa ex aute nulla elit. Nulla voluptate enim irure aute elit tempor. Eiusmod minim occaecat id consequat aliqua reprehenderit sunt aliqua enim nostrud ipsum. Et mollit magna voluptate. Adipisicing exercitation laborum enim tempor non aliquip. Proident ipsum sit fugiat id reprehenderit est voluptate nulla. Proident consequat cillum consequat aliqua esse labore reprehenderit nulla in anim eiusmod.</p>",
+          "rightText": "<h2>Right title</h2><p>Ad pariatur incididunt qui ex ea Lorem culpa sint eiusmod aliquip in. Ullamco et adipisicing ut irure exercitation nostrud minim eu culpa ex aute nulla elit. Nulla voluptate enim irure aute elit tempor. Eiusmod minim occaecat id consequat aliqua reprehenderit sunt aliqua enim nostrud ipsum. Et mollit magna voluptate. Adipisicing exercitation laborum enim tempor non aliquip. Proident ipsum sit fugiat id reprehenderit est voluptate nulla. Proident consequat cillum consequat aliqua esse labore reprehenderit nulla in anim eiusmod.</p>"
+        }
+      ]
     },
     {
       "id": "about",
