@@ -26,14 +26,48 @@
     {
       "id": "about",
       "title": "About Us | Astro Widgets",
-      "description": "Learn more about Astro Widgets.",
-      "widgets": []
+      "description": "Astro is a modern frontend framework designed for building fast, optimized websites with ease. Combining the best of static site generation and dynamic rendering, Astro helps developers create high-performance web applications that deliver exceptional user experiences. With its component-driven architecture and seamless integration with popular libraries, Astro is revolutionizing the way we build for the web.",
+      "widgets": [
+        {
+          "type": "TextWidget",
+          "text": "<h2>About Astro Widgets</h2><p>Here you can find the best widgets in the galaxy.</p>"
+        },
+        {
+          "type": "ImageWidget",
+          "image": {
+            "url": "https://via.placeholder.com/1600x900",
+            "alt": "Some alt..."
+          }
+        },
+        {
+          "type": "TwoTextColsWidget",
+          "leftText": "<h2>Left title</h2><p>Ad pariatur incididunt qui ex ea Lorem culpa sint eiusmod aliquip in. Ullamco et adipisicing ut irure exercitation nostrud minim eu culpa ex aute nulla elit. Nulla voluptate enim irure aute elit tempor. Eiusmod minim occaecat id consequat aliqua reprehenderit sunt aliqua enim nostrud ipsum. Et mollit magna voluptate. Adipisicing exercitation laborum enim tempor non aliquip. Proident ipsum sit fugiat id reprehenderit est voluptate nulla. Proident consequat cillum consequat aliqua esse labore reprehenderit nulla in anim eiusmod.</p>",
+          "rightText": "<h2>Right title</h2><p>Ad pariatur incididunt qui ex ea Lorem culpa sint eiusmod aliquip in. Ullamco et adipisicing ut irure exercitation nostrud minim eu culpa ex aute nulla elit. Nulla voluptate enim irure aute elit tempor. Eiusmod minim occaecat id consequat aliqua reprehenderit sunt aliqua enim nostrud ipsum. Et mollit magna voluptate. Adipisicing exercitation laborum enim tempor non aliquip. Proident ipsum sit fugiat id reprehenderit est voluptate nulla. Proident consequat cillum consequat aliqua esse labore reprehenderit nulla in anim eiusmod.</p>"
+        }
+      ]
     },
     {
       "id": "contact",
       "title": "Contact Us | Astro Widgets",
       "description": "Get in touch with Astro Widgets.",
-      "widgets": []
+      "widgets": [
+        {
+          "type": "TwoTextColsWidget",
+          "leftText": "<h2>Left title</h2><p>Ad pariatur incididunt qui ex ea Lorem culpa sint eiusmod aliquip in. Ullamco et adipisicing ut irure exercitation nostrud minim eu culpa ex aute nulla elit. Nulla voluptate enim irure aute elit tempor. Eiusmod minim occaecat id consequat aliqua reprehenderit sunt aliqua enim nostrud ipsum. Et mollit magna voluptate. Adipisicing exercitation laborum enim tempor non aliquip. Proident ipsum sit fugiat id reprehenderit est voluptate nulla. Proident consequat cillum consequat aliqua esse labore reprehenderit nulla in anim eiusmod.</p>",
+          "rightText": "<h2>Right title</h2><p>Ad pariatur incididunt qui ex ea Lorem culpa sint eiusmod aliquip in. Ullamco et adipisicing ut irure exercitation nostrud minim eu culpa ex aute nulla elit. Nulla voluptate enim irure aute elit tempor. Eiusmod minim occaecat id consequat aliqua reprehenderit sunt aliqua enim nostrud ipsum. Et mollit magna voluptate. Adipisicing exercitation laborum enim tempor non aliquip. Proident ipsum sit fugiat id reprehenderit est voluptate nulla. Proident consequat cillum consequat aliqua esse labore reprehenderit nulla in anim eiusmod.</p>"
+        },
+        {
+          "type": "TextWidget",
+          "text": "<h2>Contact</h2><p>Our employees are the best around the world. Contact them!</p>"
+        },
+        {
+          "type": "ImageWidget",
+          "image": {
+            "url": "https://cataas.com/cat?width=1600&height=900",
+            "alt": "Some alt..."
+          }
+        }
+      ]
     }
   ],
   "navigation": [
