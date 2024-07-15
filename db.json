@@ -23,16 +23,19 @@
     {
       "id": 1,
       "name": "Home",
+      "slug": "home",
       "url": "/"
     },
     {
       "id": 2,
       "name": "About",
+      "slug": "about",
       "url": "/about"
     },
     {
       "id": 3,
       "name": "Contact",
+      "slug": "contact",
       "url": "/contact"
     }
   ]
