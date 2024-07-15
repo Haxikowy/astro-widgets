@@ -1,4 +1,5 @@
 ---
+import Widget from "../components/Widget.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { ApiClient } from "../service";
 
@@ -21,6 +22,7 @@ const title = page.title.split("|")[0].trim();
   <main class="main">
     <h1 class="page-title">{title}</h1>
     <p class="description">{page.description}</p>
+    {page.widgets.map((widget) => <Widget widget={widget} />)}
   </main>
 </BaseLayout>
 
@@ -30,6 +32,7 @@ const title = page.title.split("|")[0].trim();
     max-width: 1440px;
     padding-inline: 24px;
     margin-inline: auto;
+    margin-bottom: 36px;
 
     display: flex;
     flex-direction: column;
