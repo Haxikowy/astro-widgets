@@ -1,0 +1,39 @@
+{
+  "pages": [
+    {
+      "id": "home",
+      "title": "Homepage | Astro Widgets",
+      "description": "This is an example homepage for Astro Widgets.",
+      "widgets": []
+    },
+    {
+      "id": "about",
+      "title": "About Us | Astro Widgets",
+      "description": "Learn more about Astro Widgets.",
+      "widgets": []
+    },
+    {
+      "id": "contact",
+      "title": "Contact Us | Astro Widgets",
+      "description": "Get in touch with Astro Widgets.",
+      "widgets": []
+    }
+  ],
+  "navigation": [
+    {
+      "id": 1,
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "id": 2,
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "id": 3,
+      "name": "Contact",
+      "url": "/contact"
+    }
+  ]
+}
