@@ -1,0 +1,28 @@
+---
+import type { TextWidget } from "../../service/models";
+
+interface Props extends TextWidget {}
+
+const { text } = Astro.props;
+---
+
+<section class="text-widget">
+  <div class="wysiwyg" set:html={text} />
+</section>
+
+<style>
+  .text-widget {
+    --columns: 1;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin-inline: auto;
+
+    @media (min-width: 768px) {
+      --columns: 2;
+    }
+  }
+</style>
