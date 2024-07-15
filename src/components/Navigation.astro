@@ -1,0 +1,55 @@
+---
+import type { Navigation } from "../service";
+
+interface Props {
+  navigation: Navigation;
+}
+
+const { navigation } = Astro.props;
+const { pathname } = Astro.url;
+---
+
+<nav class="nav">
+  <ul class="list">
+    {
+      navigation.map(({ url, name }) => (
+        <li class="list-item">
+          <a
+            class:list={["link", { "link--active": url === pathname }]}
+            href={url}
+          >
+            {name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .nav {
+    width: 100%;
+    padding: 24px 32px;
+  }
+
+  .list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .link {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.5rem;
+  }
+
+  .link--active {
+    color: var(--blue);
+  }
+</style>

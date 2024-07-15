@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { ApiClient } from "../service";
+
+export async function getStaticPaths() {
+  const navigation = await ApiClient.getNavigation();
+
+  return navigation.map(({ slug }) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+
+const page = await ApiClient.getPage(slug ?? "home");
+
+const title = page.title.split("|")[0].trim();
+---
+
+<BaseLayout title={page.title} description={page.description}>
+  <main class="main">
+    <h1 class="page-title">{title}</h1>
+    <p class="description">{page.description}</p>
+  </main>
+</BaseLayout>
+
+<style>
+  .main {
+    width: 100%;
+    max-width: 1440px;
+    padding-inline: 24px;
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .page-title {
+    font-size: 3em;
+    color: var(--black);
+    text-align: center;
+  }
+
+  .description {
+    font-size: 1.5em;
+    text-align: center;
+  }
+</style>

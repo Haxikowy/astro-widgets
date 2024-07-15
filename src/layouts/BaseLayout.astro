@@ -1,0 +1,53 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Navigation from "../components/Navigation.astro";
+import { ApiClient } from "../service";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const navigation = await ApiClient.getNavigation();
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <ViewTransitions />
+    <title>{title}</title>
+    <style>
+      :root {
+        --black: #333;
+        --white: #f8f8f8;
+        --blue: #0070f3;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        color: var(--black);
+        background-color: var(--white);
+      }
+    </style>
+  </head>
+  <body>
+    <Navigation navigation={navigation} />
+    <slot />
+  </body>
+</html>
