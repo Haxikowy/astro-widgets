@@ -1,0 +1,14 @@
+---
+import { Widget } from "../service";
+
+interface Props {
+  widget: Widget;
+}
+
+const { widget } = Astro.props;
+
+const Component = (await import(`../components/widgets/${widget.type}.astro`))
+  .default;
+---
+
+<Component {...widget} />
