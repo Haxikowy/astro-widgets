@@ -11,6 +11,8 @@ export async function getStaticPaths() {
   }));
 }
 
+interface Props {}
+
 const { slug } = Astro.params;
 
 const page = await ApiClient.getPage(slug ?? "home");
