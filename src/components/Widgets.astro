@@ -1,0 +1,51 @@
+---
+import type { ComponentInstance } from "astro";
+import type { Widget } from "../service";
+
+interface Props {
+  widgets: Widget[];
+}
+
+const { widgets } = Astro.props;
+
+const components = await Astro.glob<ComponentInstance>(
+  "./widgets/*.(astro|tsx|vue)",
+);
+
+const getComponentInstanceName = (
+  component: ComponentInstance["default"] & { __name?: string },
+) => {
+  if (!(component?.name || component?.__name))
+    throw new Error("Couldn't find component name");
+
+  return component.name ?? component.__name ?? "";
+};
+
+const COMPONENTS_BY_TYPE = components.reduce<
+  Record<string, ComponentInstance["default"]>
+>(
+  (acc, component) => ({
+    ...acc,
+    [getComponentInstanceName(component.default)]: component.default,
+  }),
+  {},
+);
+
+const getComponent = (type: Widget["type"]) => {
+  if (!(type in COMPONENTS_BY_TYPE))
+    throw new Error(`No such component - ${type}`);
+
+  return COMPONENTS_BY_TYPE[type];
+};
+
+const widgetsWithComponent = widgets.map((widget) => ({
+  ...widget,
+  Component: getComponent(widget.type),
+}));
+---
+
+{
+  widgetsWithComponent.map(({ Component, ...widget }) => (
+    <Component {...widget} />
+  ))
+}
