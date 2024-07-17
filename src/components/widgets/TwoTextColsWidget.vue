@@ -11,7 +11,9 @@ defineProps<TwoTextColsWidget>();
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../styles";
+
 .two-text-cols-widget {
   --columns: 1;
 
@@ -22,7 +24,7 @@ defineProps<TwoTextColsWidget>();
   max-width: 1000px;
   margin-inline: auto;
 
-  @media (min-width: 768px) {
+  @include media-up(md) {
     --columns: 2;
   }
 }

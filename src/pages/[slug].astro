@@ -28,7 +28,9 @@ const title = page.title.split("|")[0].trim();
   </main>
 </BaseLayout>
 
-<style>
+<style lang="scss">
+  @import "../styles";
+
   .main {
     width: 100%;
     max-width: 1440px;
@@ -43,7 +45,7 @@ const title = page.title.split("|")[0].trim();
 
   .page-title {
     font-size: 3em;
-    color: var(--black);
+    color: $black;
     text-align: center;
   }
 

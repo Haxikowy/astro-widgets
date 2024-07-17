@@ -1,3 +1,5 @@
+@import '../../styles';
+
 .image-widget {
   margin-inline: auto;
   width: 100%;
@@ -14,11 +16,11 @@
   width: 100%;
   aspect-ratio: 315 / 414;
 
-  @media (min-width: 768px) {
+  @include media-up(md) {
     aspect-ratio: 660 / 614;
   }
 
-  @media (min-width: 1280px) {
+  @include media-up(lg) {
     aspect-ratio: 16 / 9;
   }
 }

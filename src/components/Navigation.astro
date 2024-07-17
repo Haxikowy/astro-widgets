@@ -26,7 +26,9 @@ const { pathname } = Astro.url;
   </ul>
 </nav>
 
-<style>
+<style lang="scss">
+  @import "../styles";
+
   .nav {
     width: 100%;
     padding: 24px 32px;
@@ -45,11 +47,11 @@ const { pathname } = Astro.url;
 
   .link {
     text-decoration: none;
-    color: var(--black);
+    color: $black;
     font-size: 1.5rem;
   }
 
   .link--active {
-    color: var(--blue);
+    color: $blue;
   }
 </style>

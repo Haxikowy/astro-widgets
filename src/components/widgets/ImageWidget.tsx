@@ -1,5 +1,5 @@
 import type { ImageWidget } from "../../service/models";
-import styles from "./ImageWidget.module.css";
+import styles from "./ImageWidget.module.scss";
 
 export default function ImageWidget({ image }: ImageWidget) {
   return (
