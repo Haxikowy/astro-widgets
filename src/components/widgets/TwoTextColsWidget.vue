@@ -12,8 +12,6 @@ defineProps<TwoTextColsWidget>();
 </template>
 
 <style lang="scss" scoped>
-@import "../../styles";
-
 .two-text-cols-widget {
   --columns: 1;
 

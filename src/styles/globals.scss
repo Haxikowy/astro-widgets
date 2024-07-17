@@ -1,5 +1,3 @@
-@use 'vars';
-
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -24,8 +22,8 @@ body {
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, sans-serif;
-  color: vars.$black;
-  background-color: vars.$white;
+  color: $black;
+  background-color: $white;
   -webkit-font-smoothing: antialiased;
 }
 
