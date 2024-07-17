@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TwoTextColsWidget } from "../../service/models";
+import type { TwoTextColsWidget } from "@/service/models";
 
 defineProps<TwoTextColsWidget>();
 </script>

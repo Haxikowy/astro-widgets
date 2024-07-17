@@ -1,7 +1,7 @@
 ---
-import Widgets from "../components/Widgets.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { ApiClient } from "../service";
+import Widgets from "@/components/Widgets.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { ApiClient } from "@/service";
 
 export async function getStaticPaths() {
   const navigation = await ApiClient.getNavigation();
