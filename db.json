@@ -90,5 +90,16 @@
       "slug": "contact",
       "url": "/contact"
     }
-  ]
+  ],
+  "contact": [{
+    "id": "2c1ad733-e805-4d76-9fa2-831710f4cde9",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "message": "Hello, I would like to know more about your products."
+  }, {
+    "id": "8599bce4-fbd2-4f59-ab2f-71887aa83813",
+    "name": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "message": "Hi, I'd love to have a conversation with you."
+  }]
 }
