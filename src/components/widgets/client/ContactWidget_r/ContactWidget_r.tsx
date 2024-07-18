@@ -3,11 +3,11 @@ import FormWrapper from "@/components/form/FormWrapper";
 import TextArea from "@/components/form/TextArea";
 import TextInput from "@/components/form/TextInput";
 import { ApiClient } from "@/service";
-import type { ContactWidget } from "@/service/models";
+import type { ContactWidget } from "@/service/models.ts";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import styles from "./ContactWidget.module.scss";
+import styles from "./ContactWidget_r.module.scss";
 
 const requiredString = z.string().min(1, { message: "Required" });
 
@@ -19,7 +19,7 @@ const schema = z.object({
 
 type ContactFormData = z.infer<typeof schema>;
 
-export default function ContactWidget(_: ContactWidget) {
+export default function ContactWidget_r(_: ContactWidget) {
   const form = useForm<ContactFormData>({
     resolver: zodResolver(schema),
   });
@@ -27,6 +27,7 @@ export default function ContactWidget(_: ContactWidget) {
   const onSubmit = async (data: ContactFormData) => {
     const response = await ApiClient.postContact(data);
 
+    console.log(response);
     if (response.status === "success") {
       console.log("Success!");
     } else {

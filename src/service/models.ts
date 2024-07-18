@@ -50,7 +50,11 @@ export type ApiResponse<TData = undefined> =
   | SuccessResponse<TData>
   | ErrorResponse;
 
-export type Widget = ImageWidget | TextWidget | TwoTextColsWidget;
+export type Widget =
+  | ImageWidget
+  | TextWidget
+  | TwoTextColsWidget
+  | ContactWidget;
 
 export type Page = {
   id: string;

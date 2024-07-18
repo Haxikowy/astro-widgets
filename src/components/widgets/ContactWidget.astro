@@ -1,0 +1,10 @@
+---
+import ContactWidget_r from "./client/ContactWidget_r";
+import type { ContactWidget as ContactWidgetType } from "@/service/models";
+
+interface Props extends ContactWidgetType {}
+
+const props = Astro.props;
+---
+
+<ContactWidget_r client:idle {...props} />
