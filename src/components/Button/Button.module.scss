@@ -19,10 +19,11 @@
 .text {
   display: block;
   padding: 1rem 0.75rem;
-  border: 1px solid $black;
+  border: 2px solid $black;
   border-radius: 0.25rem;
   background-color: $blue-900;
   transition: transform 100ms ease;
+  font-weight: bold;
 
   .button:hover &,
   &:hover {
