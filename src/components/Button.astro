@@ -1,9 +1,9 @@
 ---
-import type { Polymorphic } from "astro/types";
+import type { HTMLAttributes } from "astro/types";
 
-type Props = Polymorphic<{ as: "button" }>;
+interface Props extends HTMLAttributes<"button"> {}
 
-const { class: className, ...props } = Astro.props as Props;
+const { class: className, ...props } = Astro.props;
 ---
 
 <button class:list={["button", className]} {...props}>
@@ -17,6 +17,7 @@ const { class: className, ...props } = Astro.props as Props;
     position: relative;
     width: max-content;
     z-index: 0;
+    color: $white;
 
     &::after {
       content: "";
