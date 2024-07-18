@@ -26,6 +26,30 @@ export type TwoTextColsWidget = {
   rightText: string; // includes HTML
 };
 
+export type ContactWidget = {
+  type: "ContactWidget";
+};
+
+export type ContactRequest = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+export type SuccessResponse<TData = undefined> = {
+  status: "success";
+  data: TData;
+};
+
+export type ErrorResponse = {
+  status: "error";
+  message: string;
+};
+
+export type ApiResponse<TData = undefined> =
+  | SuccessResponse<TData>
+  | ErrorResponse;
+
 export type Widget = ImageWidget | TextWidget | TwoTextColsWidget;
 
 export type Page = {
