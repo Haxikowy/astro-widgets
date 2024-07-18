@@ -6,7 +6,7 @@ import type {
 } from "./models.ts";
 
 class ApiClient {
-  BASE_URL = import.meta.env.API_URL ?? "";
+  BASE_URL = import.meta.env.PUBLIC_API_URL ?? "";
 
   private async get<TData>(url: string): Promise<TData> {
     const response = await fetch(this.BASE_URL + url, {
