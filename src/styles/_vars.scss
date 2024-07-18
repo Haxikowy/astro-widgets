@@ -10,4 +10,8 @@ $media-breakpoints: (
 
 $black: var(--black, #333);
 $white: var(--white, #f8f8f8);
-$blue: var(--blue, #0070f3);
+$blue-900: var(--blue-900, #0070f3);
+$blue-600: var(--blue-600, #449aff);
+$blue-500: var(--light-500, #7ab7ff);
+
+$border-radius-sm: .25rem
