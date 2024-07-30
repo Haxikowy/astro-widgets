@@ -24,7 +24,7 @@
     "react-hook-form": "^7.52.1",
     "sass": "^1.77.8",
     "sass-utils-collection": "^3.0.1",
-    "typescript": "^5.5.3",
+    "typescript": "^5.5.4",
     "vue": "^3.4.34",
     "zod": "^3.23.8"
   },
