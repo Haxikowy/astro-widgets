@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.1",
-    "@astrojs/react": "^3.6.0",
+    "@astrojs/react": "^3.6.1",
     "@astrojs/vue": "^4.5.0",
     "@hookform/resolvers": "^3.9.0",
     "@types/react": "^18.3.3",
